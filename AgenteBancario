@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class AgenteBancario {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Sistema de Emisión de Tickets de Operación Bancaria");
+        
+        System.out.print("Ingrese el nombre del cliente: ");
+        String nombreCliente = scanner.nextLine();
+        
+        System.out.print("Ingrese el tipo de operación: ");
+        String tipoOperacion = scanner.nextLine();
+        
+        System.out.print("Ingrese el monto de la transacción: ");
+        double montoTransaccion = scanner.nextDouble();
+        
+        System.out.println("\nGenerando ticket de operación...\n");
+        
+        // Imprimir el ticket de operación
+        System.out.println("******************************");
+        System.out.println("     Ticket de Operación");
+        System.out.println("******************************");
+        System.out.println("Cliente: " + nombreCliente);
+        System.out.println("Operación: " + tipoOperacion);
+        System.out.println("Monto: $" + montoTransaccion);
+        System.out.println("Fecha: " + obtenerFechaActual());
+        System.out.println("******************************");
+    }
+    
+    public static String obtenerFechaActual() {
+        // Aquí puedes implementar la lógica para obtener la fecha actual en el formato deseado
+        // Por simplicidad, en este ejemplo simplemente se devuelve una cadena estática
+        return "25/08/2023";
+    }
+}
