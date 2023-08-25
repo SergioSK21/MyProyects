@@ -1,0 +1,34 @@
+import java.util.Scanner;
+
+public class BoletoDeViaje {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Bienvenido a la emisión de boletos de viaje interprovincial");
+        
+        System.out.print("Ingrese su nombre: ");
+        String nombre = scanner.nextLine();
+        
+        System.out.print("Ingrese el destino del viaje: ");
+        String destino = scanner.nextLine();
+        
+        System.out.print("Ingrese la fecha del viaje: ");
+        String fecha = scanner.nextLine();
+        
+        System.out.print("Ingrese el precio del boleto: ");
+        double precio = scanner.nextDouble();
+        
+        System.out.println("\nImprimiendo boleto...\n");
+        
+        // Imprimir el boleto
+        System.out.println("******************************");
+        System.out.println("         Boleto de Viaje");
+        System.out.println("******************************");
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Destino: " + destino);
+        System.out.println("Fecha: " + fecha);
+        System.out.println("Precio: $" + precio);
+        System.out.println("******************************");
+    }
+}
