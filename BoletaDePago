@@ -1,0 +1,35 @@
+import java.util.Scanner;
+
+public class BoletaDePago {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.println("Sistema de Generación de Boleta de Pago");
+        
+        System.out.print("Ingrese su nombre: ");
+        String nombre = scanner.nextLine();
+        
+        System.out.print("Ingrese el subtotal: ");
+        double subtotal = scanner.nextDouble();
+        
+        // Calcular el descuento (por ejemplo, 10%)
+        double descuentoPorcentaje = 0.10;
+        double descuento = subtotal * descuentoPorcentaje;
+        
+        // Calcular el total a pagar
+        double total = subtotal - descuento;
+        
+        System.out.println("\nGenerando boleta de pago...\n");
+        
+        // Imprimir la boleta de pago
+        System.out.println("******************************");
+        System.out.println("       Boleta de Pago");
+        System.out.println("******************************");
+        System.out.println("Cliente: " + nombre);
+        System.out.println("Subtotal: $" + subtotal);
+        System.out.println("Descuento (" + (descuentoPorcentaje * 100) + "%): $" + descuento);
+        System.out.println("Total a Pagar: $" + total);
+        System.out.println("******************************");
+    }
+}
